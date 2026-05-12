@@ -1,44 +1,26 @@
 #!/usr/bin/make -f
 
-export DH_VERBOSE = 1
+MAKEFLAGS += --no-builtin-rules --no-builtin-variables
+.SUFFIXES:
+.DEFAULT_GOAL :=
 
 %:
 	dh $@
 
 override_dh_auto_configure:
-	# nothing to configure — prebuilt package
+	@echo "Skipping configure"
 
 override_dh_auto_build:
-	# nothing to build — prebuilt package
+	@echo "Skipping build"
 
 override_dh_auto_clean:
-	# nothing to clean — prebuilt package
+	@echo "Skipping clean"
+
+override_dh_strip:
+	@echo "Skipping strip"
+
+override_dh_shlibdeps:
+	@echo "Skipping shlibdeps"
 
 override_dh_auto_install:
-ifeq ($(DEB_HOST_ARCH),arm64)
-	mkdir -p $(CURDIR)/debian/qcom-sensors-api/
-	cp -a data/qcom-sensors-api/arm64/* $(CURDIR)/debian/qcom-sensors-api/
-	mkdir -p $(CURDIR)/debian/qcom-sensors-core/
-	cp -a data/qcom-sensors-core/arm64/* $(CURDIR)/debian/qcom-sensors-core/
-	mkdir -p $(CURDIR)/debian/qcom-sensors-registry/
-	cp -a data/qcom-sensors-registry/arm64/* $(CURDIR)/debian/qcom-sensors-registry/
-	mkdir -p $(CURDIR)/debian/qcom-sensors-services/
-	cp -a data/qcom-sensors-services/arm64/* $(CURDIR)/debian/qcom-sensors-services/
-	mkdir -p $(CURDIR)/debian/qcom-sensors-test-core/
-	cp -a data/qcom-sensors-test-core/arm64/* $(CURDIR)/debian/qcom-sensors-test-core/
-	mkdir -p $(CURDIR)/debian/qcom-sensors-test-apps/
-	cp -a data/qcom-sensors-test-apps/arm64/* $(CURDIR)/debian/qcom-sensors-test-apps/
-endif
-	:
-
-override_dh_fixperms: ;
-
-override_dh_shlibdeps: ;
-
-override_dh_strip: ;
-
-override_dh_dwz: ;
-
-DEB_VERSION = $(shell dpkg-parsechangelog -S 'Version' | cut -d ':' -f 2)
-execute_after_dh_builddeb:
-	:
+	@echo "Skipping auto install"
