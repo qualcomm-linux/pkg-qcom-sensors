@@ -2,11 +2,6 @@
 
 export DH_VERBOSE = 1
 
-# Clear ALL implicit suffix rules for this make invocation
-.SUFFIXES:
-
-MAKEFLAGS += --no-builtin-rules --no-builtin-variables
-
 %:
 	dh $@
 
@@ -34,6 +29,7 @@ ifeq ($(DEB_HOST_ARCH),arm64)
 	mkdir -p $(CURDIR)/debian/qcom-sensors-test-apps/
 	cp -a data/qcom-sensors-test-apps/arm64/* $(CURDIR)/debian/qcom-sensors-test-apps/
 endif
+	:
 
 override_dh_fixperms: ;
 
@@ -43,5 +39,6 @@ override_dh_strip: ;
 
 override_dh_dwz: ;
 
+DEB_VERSION = $(shell dpkg-parsechangelog -S 'Version' | cut -d ':' -f 2)
 execute_after_dh_builddeb:
 	:
