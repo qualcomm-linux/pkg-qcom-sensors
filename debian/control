@@ -2,53 +2,60 @@ Source: qcom-sensors-prebuilts
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
 Standards-Version: 4.6.2
 Section: misc
+Priority: optional
 Rules-Requires-Root: no
 Build-Depends: debhelper-compat (= 13)
 
 Package: qcom-sensors-api
 Architecture: arm64
-Description: Qualcomm Sensors API library
- API library for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: libs
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6
+Description: Qualcomm Sensors API library
+ API library for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-core
 Architecture: arm64
-Description: Qualcomm Sensors core library
- Core library for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: libs
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-api (= ${binary:Version})
+Description: Qualcomm Sensors core library
+ Core library for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-registry
 Architecture: arm64
-Description: Qualcomm Sensors registry
- Registry service for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: utils
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
+Description: Qualcomm Sensors registry
+ Registry service for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-services
 Architecture: arm64
-Description: Qualcomm Sensors services daemon
- Services daemon for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: utils
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
+Description: Qualcomm Sensors services daemon
+ Services daemon for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-test-core
 Architecture: arm64
-Description: Qualcomm Sensors test core
- Test core library for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: utils
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
+Description: Qualcomm Sensors test core
+ Test core library for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-test-apps
 Architecture: arm64
-Description: Qualcomm Sensors test applications
- Test applications for the Qualcomm Sensors framework.
+Multi-Arch: same
 Section: utils
 Priority: optional
-Depends: ${misc:Depends}, libc6 (>= 2.17)
+Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-test-core (= ${binary:Version})
+Description: Qualcomm Sensors test applications
+ Test applications for the Qualcomm Sensors framework.
