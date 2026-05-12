@@ -2,6 +2,11 @@
 
 export DH_VERBOSE = 1
 
+# Clear ALL implicit suffix rules for this make invocation
+.SUFFIXES:
+
+MAKEFLAGS += --no-builtin-rules --no-builtin-variables
+
 %:
 	dh $@
 
