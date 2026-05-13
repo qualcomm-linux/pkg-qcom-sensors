@@ -1,3 +1,9 @@
+qcom-sensors-prebuilts (1.0.2-3) UNRELEASED; urgency=medium
+
+  * Initial commit
+
+ -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 13 May 2026 09:28:53 +0000
+
 qcom-sensors-prebuilts (1.0.2-2) unstable; urgency=medium
 
   [ Venkata Akhil Segu ]
