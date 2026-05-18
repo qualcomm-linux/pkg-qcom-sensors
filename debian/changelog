@@ -1,6 +1,6 @@
-qcom-sensors-prebuilts (1.0.2-4) UNRELEASED; urgency=medium
+qcom-sensors-prebuilts (1.2.2) unstable; urgency=medium
 
-  * Initial commit
+  * Making version inline with meta-qcom
 
  -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Thu, 14 May 2026 05:32:05 +0000
 
