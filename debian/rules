@@ -26,6 +26,13 @@ override_dh_auto_install:
 	mkdir -p debian/qcom-sensors-test-core
 	cp -a data/qcom-sensors-test-core/arm64/* debian/qcom-sensors-test-core/
 	mkdir -p debian/qcom-sensors-test-apps
+	# Dev packages
+	mkdir -p debian/qcom-sensors-api-dev
+	cp -a data/qcom-sensors-api-dev/arm64/* debian/qcom-sensors-api-dev/
+	mkdir -p debian/qcom-sensors-core-dev
+	cp -a data/qcom-sensors-core-dev/arm64/* debian/qcom-sensors-core-dev/
+	mkdir -p debian/qcom-sensors-test-core-dev
+	cp -a data/qcom-sensors-test-core-dev/arm64/* debian/qcom-sensors-test-core-dev/
 
 override_dh_strip:
 	:
