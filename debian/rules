@@ -1,57 +1,57 @@
-#!/usr/bin/make -f
+#!/usr/bin/make -rRf
 
 export DH_VERBOSE=1
 
 %:
-    dh $@ --with systemd
+	dh $@ --with systemd
 
 override_dh_auto_build:
-    :
+	:
 
 override_dh_auto_install:
 
-    # -------- API --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --with-glib --with-sensinghub-api=/usr/include
-    dh_auto_build
-    dh_auto_install
+	# -------- API --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --with-glib --with-sensinghub-api=/usr/include
+	dh_auto_build
+	dh_auto_install
 
-    rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
-    rm -rf debian/tmp/etc/sensors/proto || true
+	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
+	rm -rf debian/tmp/etc/sensors/proto || true
 
-    # -------- CONFIG --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --enable-target-qcm6490
-    dh_auto_build
-    dh_auto_install
+	# -------- CONFIG --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --enable-target-qcm6490
+	dh_auto_build
+	dh_auto_install
 
-    # -------- CORE --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --with-glib
-    dh_auto_build
-    dh_auto_install
+	# -------- CORE --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --with-glib
+	dh_auto_build
+	dh_auto_install
 
-    rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
+	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
 
-    # -------- SERVICES --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --with-glib --enable-versioned-lib
-    dh_auto_build
-    dh_auto_install
+	# -------- SERVICES --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --with-glib --enable-versioned-lib
+	dh_auto_build
+	dh_auto_install
 
-    # -------- TEST CORE --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --with-glib
-    dh_auto_build
-    dh_auto_install
+	# -------- TEST CORE --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --with-glib
+	dh_auto_build
+	dh_auto_install
 
-    rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.*a || true
+	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.*a || true
 
-    # -------- TEST APPS --------
-    $(MAKE) clean || true
-    dh_auto_configure -- --with-glib
-    dh_auto_build
-    dh_auto_install
+	# -------- TEST APPS --------
+	$(MAKE) clean || true
+	dh_auto_configure -- --with-glib
+	dh_auto_build
+	dh_auto_install
 
 override_dh_installsystemd:
-    dh_installsystemd --name=sscrpcd
+	dh_installsystemd --name=sscrpcd
