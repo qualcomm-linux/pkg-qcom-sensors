@@ -53,4 +53,4 @@ override_dh_auto_install:
 	rm -rf debian/tmp/etc/sensors/proto || true
 
 override_dh_installsystemd:
-	dh_installsystemd --name=sscrpcd
+	dh_installsystemd -p qcom-sensors-services --name=sscrpcd
