@@ -1,2 +1,2 @@
-usr/bin/*
+usr/bin/sscrpcd
 usr/lib/systemd/system/sscrpcd.service
