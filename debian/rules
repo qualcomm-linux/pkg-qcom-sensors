@@ -5,53 +5,52 @@ export DH_VERBOSE=1
 %:
 	dh $@
 
+override_dh_auto_configure:
+	@echo "Skipping configure (prebuilt package)"
+
 override_dh_auto_build:
-	:
+	@echo "Skipping build (prebuilt package)"
 
 override_dh_auto_install:
+	# Clean staging
+	rm -rf debian/tmp
+	mkdir -p debian/tmp/usr
 
 	# -------- API --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --with-glib --with-sensinghub-api=/usr/include
-	dh_auto_build
-	dh_auto_install
+	cp -r data/qcom-sensors-api/arm64/usr/* debian/tmp/usr/
 
-	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
-	rm -rf debian/tmp/etc/sensors/proto || true
-
-	# -------- CONFIG --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --enable-target-qcm6490
-	dh_auto_build
-	dh_auto_install
+	# -------- API DEV --------
+	cp -r data/qcom-sensors-api-dev/arm64/usr/* debian/tmp/usr/
 
 	# -------- CORE --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --with-glib
-	dh_auto_build
-	dh_auto_install
+	cp -r data/qcom-sensors-core/arm64/usr/* debian/tmp/usr/
 
-	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
+	# -------- CORE DEV --------
+	cp -r data/qcom-sensors-core-dev/arm64/usr/* debian/tmp/usr/
+
+	# -------- REGISTRY --------
+	cp -r data/qcom-sensors-registry/arm64/etc debian/tmp/ || true
+	cp -r data/qcom-sensors-registry/arm64/usr/* debian/tmp/usr/ || true
 
 	# -------- SERVICES --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --with-glib --enable-versioned-lib
-	dh_auto_build
-	dh_auto_install
+	cp -r data/qcom-sensors-services/arm64/usr/* debian/tmp/usr/
 
 	# -------- TEST CORE --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --with-glib
-	dh_auto_build
-	dh_auto_install
+	cp -r data/qcom-sensors-test-core/arm64/usr/* debian/tmp/usr/
 
-	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.*a || true
+	# -------- TEST CORE DEV --------
+	cp -r data/qcom-sensors-test-core-dev/arm64/usr/* debian/tmp/usr/
 
 	# -------- TEST APPS --------
-	$(MAKE) clean || true
-	dh_auto_configure -- --with-glib
-	dh_auto_build
-	dh_auto_install
+	cp -r data/qcom-sensors-test-apps/arm64/usr/* debian/tmp/usr/
+
+	# -------- TEST APPS DEV --------
+	cp -r data/qcom-sensors-test-apps-dev/arm64/usr/* debian/tmp/usr/ || true
+
+	# Cleanup unwanted files
+	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la || true
+	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.*a || true
+	rm -rf debian/tmp/etc/sensors/proto || true
 
 override_dh_installsystemd:
 	dh_installsystemd --name=sscrpcd
