@@ -14,10 +14,20 @@ override_dh_auto_build:
 override_dh_auto_clean:
     :
 
-# ✅ Nothing installed here (like fastrpc: no manual install logic)
 override_dh_auto_install:
     :
 
-# ✅ Let dh_install pull files directly from data/
 override_dh_install:
     dh_install --sourcedir=data
+
+override_dh_strip:
+    :
+
+override_dh_dwz:
+    :
+
+override_dh_shlibdeps:
+    :
+
+override_dh_fixperms:
+    :
