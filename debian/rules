@@ -1,49 +1,23 @@
-#!/usr/bin/make -rRf
+#!/usr/bin/make -f
 
 export DH_VERBOSE=1
 
 %:
-	dh $@
+    dh $@
 
 override_dh_auto_configure:
-	:
+    :
 
 override_dh_auto_build:
-	:
+    :
 
 override_dh_auto_clean:
-	:
+    :
 
+# ✅ Nothing installed here (like fastrpc: no manual install logic)
 override_dh_auto_install:
-	mkdir -p debian/qcom-sensors-api
-	cp -a data/qcom-sensors-api/arm64/* debian/qcom-sensors-api/
-	mkdir -p debian/qcom-sensors-core
-	cp -a data/qcom-sensors-core/arm64/* debian/qcom-sensors-core/
-	mkdir -p debian/qcom-sensors-registry
-	cp -a data/qcom-sensors-registry/arm64/* debian/qcom-sensors-registry/
-	mkdir -p debian/qcom-sensors-services
-	cp -a data/qcom-sensors-services/arm64/* debian/qcom-sensors-services/
-	mkdir -p debian/qcom-sensors-test-core
-	cp -a data/qcom-sensors-test-core/arm64/* debian/qcom-sensors-test-core/
-	mkdir -p debian/qcom-sensors-test-apps
-	# Dev packages
-	mkdir -p debian/qcom-sensors-api-dev
-	cp -a data/qcom-sensors-api-dev/arm64/* debian/qcom-sensors-api-dev/
-	mkdir -p debian/qcom-sensors-core-dev
-	cp -a data/qcom-sensors-core-dev/arm64/* debian/qcom-sensors-core-dev/
-	mkdir -p debian/qcom-sensors-test-core-dev
-	cp -a data/qcom-sensors-test-core-dev/arm64/* debian/qcom-sensors-test-core-dev/
+    :
+
+# ✅ Let dh_install pull files directly from data/
 override_dh_install:
-	:
-
-override_dh_strip:
-	:
-
-override_dh_dwz:
-	:
-
-override_dh_shlibdeps:
-	:
-
-override_dh_fixperms:
-	:
+    dh_install --sourcedir=data
