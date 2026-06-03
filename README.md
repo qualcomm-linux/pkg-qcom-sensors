@@ -17,12 +17,6 @@ This repository produces the following Debian packages from prebuilt binaries:
 
 ## Prebuilt Source
 
-The prebuilt binaries are sourced from:
-
-```
-/local/mnt/workspace/vsegu/newcutout1/prebuilt_trixie/combined.tar.gz
-```
-
 Individual per-package tarballs are also available in the same directory:
 - `qcom-sensors-api_1.0.2_arm64.tar.gz`
 - `qcom-sensors-core_1.0.2_arm64.tar.gz`
@@ -58,7 +52,7 @@ The `debian/rules` file extracts prebuilt binaries from the tarball and installs
 ## Branches
 
 - **main**: Primary branch containing workflow logic and documentation.
-- **debian/qcom-next**: Orphan branch containing the `debian/` packaging files.
+- **qcom/ubuntu/***: Orphan branch containing the `debian/` packaging files.
 
 ## Workflows
 
@@ -69,10 +63,6 @@ The `main` branch includes the following workflows in the `.github/workflows/` d
 - **build-debian-package.yml**: Builds the Debian packages.
 - **pr-pre-post-merge.yml**: Executes during PR and after merge.
 - **promote-upstream.yml**: Promotes the package to a new upstream release.
-
-## Getting in Contact
-
-For support or inquiries, contact sbeaudoi@qti.qualcomm.com.
 
 ## License
 
