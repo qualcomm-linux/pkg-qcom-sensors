@@ -1,4 +1,4 @@
-# pkg-sensors
+# pkg-qcom-sensors
 
 This repository contains the Debian packaging for Qualcomm Sensors prebuilt binaries within the Qualcomm Linux ecosystem. It provides the essential structure and configuration necessary to integrate with the [qcom-build-utils](https://github.com/qualcomm-linux/qcom-build-utils) repository, enabling standardized Debian package building processes.
 
