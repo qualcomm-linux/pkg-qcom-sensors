@@ -1,5 +1,0 @@
-usr/lib/aarch64-linux-gnu/libsensinghubapiprop.so
-usr/lib/aarch64-linux-gnu/libsns_direct_channel_stub.so
-usr/lib/aarch64-linux-gnu/libsns_remote_proc_state_stub.so
-usr/lib/aarch64-linux-gnu/pkgconfig/sensors-api.pc
-usr/include

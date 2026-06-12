@@ -1,8 +1,8 @@
-qcom-sensors-prebuilts (1.2.2-3) UNRELEASED; urgency=medium
+qcom-sensors-prebuilts (2.0.0-1) unstable; urgency=medium
 
-  * Initial commit
+  * Nanopb Migration from Protobuf C++.
 
- -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 20 May 2026 10:58:03 +0000
+ -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Fri, 12 Jun 2026 10:58:03 +0000
 
 qcom-sensors-prebuilts (1.2.2-2) unstable; urgency=medium
 
