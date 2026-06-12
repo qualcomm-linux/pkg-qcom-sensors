@@ -12,28 +12,29 @@ on:
         required: true
         default: debian/qcom-next
 
-      suite:
-        description: The distribution codename or Debian suite to build for. Ex noble, questing, resolute, trixie, sid, unstable
+      distro-codename:
+        description: The distribution codename to build for. Ex noble, questing, etc
         type: choice
-        default: unstable
+        default: noble
         options:
           - noble
           - questing
           - resolute
-          - unstable
-          - forky
           - trixie
-          - bookworm
           - sid
 
-      force-docker-build:
-        description: Force local pkg-builder instead of Debusine for Debian-family suites
+      abi-checker:
+        description: Run the ABI checker or not
+        type: boolean
+        default: false
+
+      push-to-repo:
+        description: Push to repository upon successful build
         type: boolean
         default: false
 
 permissions:
   contents: read
-  packages: read
 
 jobs:
   build:
@@ -41,9 +42,7 @@ jobs:
     with:
       qcom-build-utils-ref: main
       debian-ref: ${{ inputs.debian-ref }}
-      suite: ${{ inputs.suite }}
-      force-docker-build: ${{ inputs.force-docker-build }}
-      debusine-parent-workspace: ${{ vars.DEBUSINE_PARENT_WORKSPACE }}
-    secrets:
-      DEBUSINE_USER: ${{ secrets.DEBUSINE_USER }}
-      DEBUSINE_TOKEN: ${{ secrets.DEBUSINE_TOKEN }}
+      distro-codename: ${{ inputs.distro-codename }}
+      run-abi-checker: ${{ inputs.abi-checker }}
+      is-post-merge: ${{ inputs.push-to-repo }}
+    secrets: inherit
