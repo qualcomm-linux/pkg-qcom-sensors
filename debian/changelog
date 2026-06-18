@@ -1,4 +1,4 @@
-qcom-sensors-prebuilts (2.0.0-1) unstable; urgency=medium
+qcom-sensors-prebuilts (2.0.0-1) UNRELEASED; urgency=medium
 
   * Nanopb Migration from Protobuf C++.
 
@@ -7,35 +7,28 @@ qcom-sensors-prebuilts (2.0.0-1) unstable; urgency=medium
 qcom-sensors-prebuilts (1.2.2-2) unstable; urgency=medium
 
   [ Venkata Akhil Segu ]
-  * Initial commit
+  * Updating the control and rules to copy to the right folder on the target.
 
  -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Wed, 20 May 2026 10:57:29 +0000
 
 qcom-sensors-prebuilts (1.2.2-1) unstable; urgency=medium
 
   [ Venkata Akhil Segu ]
-  * Initial commit
+  * Updated the release version to pick the latest prebuilts.
 
  -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Mon, 18 May 2026 14:43:44 +0000
-
-qcom-sensors-prebuilts (1.0.2-4) unstable; urgency=medium
-
-  [ Venkata Akhil Segu ]
-  * Initial commit
-
- -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Mon, 18 May 2026 14:31:58 +0000
 
 qcom-sensors-prebuilts (1.0.2-3) unstable; urgency=medium
 
   [ Venkata Akhil Segu ]
-  * Initial commit
+  * New Release version for the sensors prebuilts. 
 
  -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Thu, 14 May 2026 05:31:31 +0000
 
 qcom-sensors-prebuilts (1.0.2-2) unstable; urgency=medium
 
   [ Venkata Akhil Segu ]
-  * Initial commit
+  * New Release version
 
  -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Wed, 13 May 2026 09:28:15 +0000
 
