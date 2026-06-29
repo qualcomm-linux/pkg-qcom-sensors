@@ -1,0 +1,17 @@
+qcom-sensors-api/
+qcom-sensors-api-dbgsym/
+qcom-sensors-api-dev/
+qcom-sensors-core/
+qcom-sensors-core-dbgsym/
+qcom-sensors-core-dev/
+qcom-sensors-registry/
+qcom-sensors-registry-dev/
+qcom-sensors-services/
+qcom-sensors-services-dbgsym/
+qcom-sensors-services-dev/
+qcom-sensors-test-apps/
+qcom-sensors-test-apps-dbgsym/
+qcom-sensors-test-apps-dev/
+qcom-sensors-test-core/
+qcom-sensors-test-core-dbgsym/
+qcom-sensors-test-core-dev/
