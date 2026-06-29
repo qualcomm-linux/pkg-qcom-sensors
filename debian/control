@@ -2,7 +2,6 @@ Source: qcom-sensors
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
 Standards-Version: 4.6.2
 Section: misc
-Priority: optional
 Rules-Requires-Root: no
 Build-Depends: debhelper-compat (= 13)
 
@@ -10,7 +9,6 @@ Package: qcom-sensors-api
 Architecture: arm64
 Multi-Arch: same
 Section: libs
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6
 Description: Qualcomm Sensors API library
  API library for the Qualcomm Sensors framework.
@@ -19,7 +17,6 @@ Package: qcom-sensors-core
 Architecture: arm64
 Multi-Arch: same
 Section: libs
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-api (= ${binary:Version})
 Description: Qualcomm Sensors core library
  Core library for the Qualcomm Sensors framework.
@@ -28,7 +25,6 @@ Package: qcom-sensors-registry
 Architecture: arm64
 Multi-Arch: same
 Section: utils
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
 Description: Qualcomm Sensors registry
  Registry service for the Qualcomm Sensors framework.
@@ -37,7 +33,6 @@ Package: qcom-sensors-services
 Architecture: arm64
 Multi-Arch: same
 Section: utils
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
 Description: Qualcomm Sensors services daemon
  Services daemon for the Qualcomm Sensors framework.
@@ -46,7 +41,6 @@ Package: qcom-sensors-test-core
 Architecture: arm64
 Multi-Arch: same
 Section: utils
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-core (= ${binary:Version})
 Description: Qualcomm Sensors test core
  Test core library for the Qualcomm Sensors framework.
@@ -55,7 +49,6 @@ Package: qcom-sensors-test-apps
 Architecture: arm64
 Multi-Arch: same
 Section: utils
-Priority: optional
 Depends: ${misc:Depends}, libc6, libstdc++6, qcom-sensors-test-core (= ${binary:Version})
 Description: Qualcomm Sensors test applications
  Test applications for the Qualcomm Sensors framework.
@@ -64,7 +57,6 @@ Package: qcom-sensors-api-dev
 Architecture: arm64
 Multi-Arch: same
 Section: libdevel
-Priority: optional
 Depends: ${misc:Depends}, qcom-sensors-api (= ${binary:Version})
 Description: Qualcomm Sensors API library - development headers
  Development headers for the Qualcomm Sensors API library.
@@ -73,7 +65,6 @@ Package: qcom-sensors-core-dev
 Architecture: arm64
 Multi-Arch: same
 Section: libdevel
-Priority: optional
 Depends: ${misc:Depends}, qcom-sensors-core (= ${binary:Version}), qcom-sensors-api-dev (= ${binary:Version})
 Description: Qualcomm Sensors core library - development headers
  Development headers for the Qualcomm Sensors core library.
@@ -82,7 +73,6 @@ Package: qcom-sensors-test-core-dev
 Architecture: arm64
 Multi-Arch: same
 Section: libdevel
-Priority: optional
 Depends: ${misc:Depends}, qcom-sensors-test-core (= ${binary:Version}), qcom-sensors-core-dev (= ${binary:Version})
 Description: Qualcomm Sensors test core - development headers
  Development headers for the Qualcomm Sensors test core library.
