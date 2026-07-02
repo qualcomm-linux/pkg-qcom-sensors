@@ -1,6 +1,10 @@
 qcom-sensors (1.0.2-0qli+staging1~bpo13+1) UNRELEASED; urgency=medium
 
+  [ Agathe Porte ]
   * Rebuild for trixie.
+
+  [ Robie Basak ]
+  * d/watch: backport to version for trixie.
 
  -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Thu, 02 Jul 2026 10:46:47 +0200
 
