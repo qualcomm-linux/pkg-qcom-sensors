@@ -1,18 +1,11 @@
-qcom-sensors-prebuilts (1.0.2-0qli+staging1~bpo13.1) UNRELEASED; urgency=medium
+qcom-sensors (1.0.2-0qli+staging1~bpo13+1) UNRELEASED; urgency=medium
 
-  * Initial commit
+  * Rebuild for trixie.
 
- -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 13 May 2026 04:57:28 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Thu, 02 Jul 2026 10:46:47 +0200
 
-qcom-sensors-prebuilts (1.0.2-1) unstable; urgency=medium
+qcom-sensors (1.0.2-0qli+staging1~) UNRELEASED; urgency=medium
 
-  [ Venkata Akhil Segu ]
-  * Initial packaging of Qualcomm Sensors prebuilt binaries.
-    - qcom-sensors-api: Sensors API library
-    - qcom-sensors-core: Sensors core library
-    - qcom-sensors-registry: Sensors registry service
-    - qcom-sensors-services: Sensors services daemon
-    - qcom-sensors-test-core: Sensors test core library
-    - qcom-sensors-test-apps: Sensors test applications
+  * Initial release
 
- -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Wed, 13 May 2026 04:57:03 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 26 Jun 2026 14:50:36 +0200

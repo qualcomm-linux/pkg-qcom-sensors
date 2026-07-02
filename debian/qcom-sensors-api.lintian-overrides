@@ -1,0 +1,2 @@
+# We do not have control of which flags are used during build
+hardening-no-fortify-functions
