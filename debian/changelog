@@ -8,8 +8,9 @@ qcom-sensors (1.0.2-0qli+staging1~bpo13+1) UNRELEASED; urgency=medium
 
  -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Thu, 02 Jul 2026 10:46:47 +0200
 
-qcom-sensors (1.0.2-0qli+staging1~) UNRELEASED; urgency=medium
+qcom-sensors (1.0.2-0qli+staging1) forky; urgency=medium
 
+  [ Agathe Porte ]
   * Initial release
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 26 Jun 2026 14:50:36 +0200
+ -- root <root@cf28c5a5b365>  Thu, 02 Jul 2026 17:28:42 +0000
