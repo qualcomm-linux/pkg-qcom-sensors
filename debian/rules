@@ -18,6 +18,8 @@ override_dh_auto_install:
 	# -------- API --------
 	mkdir -p debian/qcom-sensors-api/usr/lib/aarch64-linux-gnu
 	cp -a data/qcom-sensors-api/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-api/usr/lib/aarch64-linux-gnu/
+    mkdir -p debian/qcom-sensors-api/etc/sensors/proto
+    cp -a data/qcom-sensors-api/arm64/etc/. debian/qcom-sensors-api/etc/
 
 	# -------- API DEV --------
 	mkdir -p debian/qcom-sensors-api-dev/usr/lib/aarch64-linux-gnu
@@ -32,8 +34,10 @@ override_dh_auto_install:
 	# -------- CORE DEV --------
 	mkdir -p debian/qcom-sensors-core-dev/usr/lib/aarch64-linux-gnu
 	mkdir -p debian/qcom-sensors-core-dev/usr/include
+    mkdir -p debian/qcom-sensors-core-dev/usr/lib/aarch64-linux-gnu/pkgconfig
 	cp -a data/qcom-sensors-core-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-core-dev/usr/lib/aarch64-linux-gnu/
 	cp -a data/qcom-sensors-core-dev/arm64/usr/include/. debian/qcom-sensors-core-dev/usr/include/
+    cp -a data/qcom-sensors-core-dev/arm64/usr/lib/aarch64-linux-gnu/pkgconfig/.
 
 	# -------- REGISTRY --------
 	mkdir -p debian/qcom-sensors-registry/etc/sensors
