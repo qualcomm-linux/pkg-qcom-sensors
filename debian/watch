@@ -1,12 +1,9 @@
 version=4
-# There currently are multiple "software package" releases for the 1.0.2 version:
+# There currently are multiple "software package" releases for the 2.0.1 version:
 #
-# - 260514.1
-# - 260512
-# - 260511.2
-# - 260512
+# - 260710
 #
-# Pick the currently-known last one (260514.1) and force it as an upstream.
+# Pick the currently-known last one (260710) and force it as an upstream.
 #
 # Note that we are matching the `qcom-sensors-core*` tarball for finding out
 # the upstream version, as the upstream tarball seems to always be named
