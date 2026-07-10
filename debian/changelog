@@ -1,8 +1,16 @@
-qcom-sensors (2.0.1-0qli+staging1) trixie; urgency=medium
+qcom-sensors (2.0.1-0qli+staging2~bpo13.1~) UNRELEASED; urgency=medium
 
   * Unreleased changes
 
- -- root <root@a99abb035121>  Thu, 10 Jul 2026 17:38:00 +0000
+ -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Fri, 10 Jul 2026 10:24:01 +0000
+
+qcom-sensors (2.0.1-0qli+staging1~bpo13.1) trixie; urgency=medium
+
+  [ Venkata Akhil Segu ]
+  * Nanopb Migration from Protobuf C++
+  * Enable color sensor feature for Glymur LE target
+
+ -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Fri, 10 Jul 2026 10:24:01 +0000
 
 qcom-sensors (1.0.2-0qli+staging1~bpo13+1) trixie; urgency=medium
 
