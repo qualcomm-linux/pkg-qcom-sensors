@@ -1,3 +1,9 @@
+qcom-sensors (2.0.1-0qli+staging2~bpo13.1qli+staging2~) UNRELEASED; urgency=medium
+
+  * Unreleased changes
+
+ -- root <root@b069ca3c1342>  Mon, 13 Jul 2026 21:33:09 +0000
+
 qcom-sensors (2.0.1-0qli+staging2~bpo13.1qli+staging1) trixie; urgency=medium
 
   * Unreleased changes
