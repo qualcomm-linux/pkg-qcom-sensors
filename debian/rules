@@ -15,24 +15,69 @@ override_dh_auto_clean:
 	:
 
 override_dh_auto_install:
-	mkdir -p debian/qcom-sensors-api
-	cp -a qcom-sensors-api/arm64/* debian/qcom-sensors-api/
-	mkdir -p debian/qcom-sensors-core
-	cp -a qcom-sensors-core/arm64/* debian/qcom-sensors-core/
-	mkdir -p debian/qcom-sensors-registry
-	cp -a qcom-sensors-registry/arm64/* debian/qcom-sensors-registry/
-	mkdir -p debian/qcom-sensors-services
-	cp -a qcom-sensors-services/arm64/* debian/qcom-sensors-services/
-	mkdir -p debian/qcom-sensors-test-core
-	cp -a qcom-sensors-test-core/arm64/* debian/qcom-sensors-test-core/
-	mkdir -p debian/qcom-sensors-test-apps
-	# Dev packages
-	mkdir -p debian/qcom-sensors-api-dev
-	cp -a qcom-sensors-api-dev/arm64/* debian/qcom-sensors-api-dev/
-	mkdir -p debian/qcom-sensors-core-dev
-	cp -a qcom-sensors-core-dev/arm64/* debian/qcom-sensors-core-dev/
-	mkdir -p debian/qcom-sensors-test-core-dev
-	cp -a qcom-sensors-test-core-dev/arm64/* debian/qcom-sensors-test-core-dev/
+	# -------- API --------
+	mkdir -p debian/qcom-sensors-api/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-api/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-api/usr/lib/aarch64-linux-gnu/
+	mkdir -p debian/qcom-sensors-api/etc/sensors/proto
+	cp -a qcom-sensors-api/arm64/etc/. debian/qcom-sensors-api/etc/
+
+	# -------- API DEV --------
+	mkdir -p debian/qcom-sensors-api-dev/usr/lib/aarch64-linux-gnu
+	mkdir -p debian/qcom-sensors-api-dev/usr/include
+	cp -a qcom-sensors-api-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-api-dev/usr/lib/aarch64-linux-gnu/
+	cp -a qcom-sensors-api-dev/arm64/usr/include/. debian/qcom-sensors-api-dev/usr/include/
+
+	# -------- CORE --------
+	mkdir -p debian/qcom-sensors-core/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-core/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-core/usr/lib/aarch64-linux-gnu/
+
+	# -------- CORE DEV --------
+	mkdir -p debian/qcom-sensors-core-dev/usr/lib/aarch64-linux-gnu
+	mkdir -p debian/qcom-sensors-core-dev/usr/include
+	cp -a qcom-sensors-core-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-core-dev/usr/lib/aarch64-linux-gnu/
+	cp -a qcom-sensors-core-dev/arm64/usr/include/. debian/qcom-sensors-core-dev/usr/include/
+
+	# -------- REGISTRY --------
+	mkdir -p debian/qcom-sensors-registry/etc/sensors
+	cp -a qcom-sensors-registry/arm64/etc/. debian/qcom-sensors-registry/etc/
+
+	# -------- REGISTRY DEV --------
+	mkdir -p debian/qcom-sensors-registry-dev/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-registry-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-registry-dev/usr/lib/aarch64-linux-gnu/
+
+	# -------- SERVICES --------
+	mkdir -p debian/qcom-sensors-services/usr/bin
+	mkdir -p debian/qcom-sensors-services/usr/lib/systemd/system
+	cp -a qcom-sensors-services/arm64/usr/bin/. debian/qcom-sensors-services/usr/bin/
+	cp -a qcom-sensors-services/arm64/usr/lib/systemd/system/. debian/qcom-sensors-services/usr/lib/systemd/system/
+
+	# -------- SERVICES DEV --------
+	mkdir -p debian/qcom-sensors-services-dev/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-services-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-services-dev/usr/lib/aarch64-linux-gnu/
+
+	# -------- TEST CORE --------
+	mkdir -p debian/qcom-sensors-test-core/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-test-core/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-test-core/usr/lib/aarch64-linux-gnu/
+
+	# -------- TEST CORE DEV --------
+	mkdir -p debian/qcom-sensors-test-core-dev/usr/lib/aarch64-linux-gnu
+	mkdir -p debian/qcom-sensors-test-core-dev/usr/include
+	cp -a qcom-sensors-test-core-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-test-core-dev/usr/lib/aarch64-linux-gnu/
+	cp -a qcom-sensors-test-core-dev/arm64/usr/include/. debian/qcom-sensors-test-core-dev/usr/include/
+
+	# -------- TEST APPS --------
+	mkdir -p debian/qcom-sensors-test-apps/usr/bin
+	cp -a qcom-sensors-test-apps/arm64/usr/bin/. debian/qcom-sensors-test-apps/usr/bin/
+
+	# -------- TEST APPS DEV --------
+	mkdir -p debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu
+	cp -a qcom-sensors-test-apps-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu/
+
+override_dh_install:
+	:
+
+override_dh_installsystemd:
+	dh_installsystemd -p qcom-sensors-services --name=sscrpcd
 
 override_dh_strip:
 	:
