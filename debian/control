@@ -1,4 +1,4 @@
-Source: qcom-sensors-prebuilts
+Source: qcom-sensors
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
 Standards-Version: 4.6.2
 Section: misc
