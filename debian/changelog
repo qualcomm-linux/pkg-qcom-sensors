@@ -1,8 +1,8 @@
-qcom-sensors (1.0.2-0qli+staging2~) UNRELEASED; urgency=medium
+qcom-sensors (1.0.2+260712-0qli+staging1~) UNRELEASED; urgency=medium
 
-  * Unreleased changes
+  * New upstream release
 
- -- root <root@0cf507b15200>  Thu, 02 Jul 2026 17:31:08 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Mon, 13 Jul 2026 15:15:47 +0200
 
 qcom-sensors (1.0.2-0qli+staging1) forky; urgency=medium
 
