@@ -2,20 +2,20 @@ qcom-sensors (2.0.1-0qli+staging2~bpo13.1qli+staging2~) UNRELEASED; urgency=medi
 
   * Unreleased changes
 
- -- root <root@b069ca3c1342>  Mon, 13 Jul 2026 21:33:09 +0000
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Mon, 13 Jul 2026 21:33:09 +0000
 
 qcom-sensors (2.0.1-0qli+staging2~bpo13.1qli+staging1) trixie; urgency=medium
 
   * Unreleased changes
 
- -- root <root@f1f6fead87d0>  Mon, 13 Jul 2026 21:31:07 +0000
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Mon, 13 Jul 2026 21:31:07 +0000
 
 qcom-sensors (2.0.1-0qli+staging2~bpo13.1) trixie; urgency=medium
 
   [ Venkata Akhil Segu ]
   * Unreleased changes
 
- -- root <root@495c1d8b99f5>  Mon, 13 Jul 2026 16:18:13 +0000
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Mon, 13 Jul 2026 16:18:13 +0000
 
 qcom-sensors (2.0.1-0qli+staging1~bpo13.1) trixie; urgency=medium
 
@@ -33,11 +33,11 @@ qcom-sensors (1.0.2-0qli+staging1~bpo13+1) trixie; urgency=medium
   [ Robie Basak ]
   * d/watch: backport to version for trixie.
 
- -- root <root@0476e7a46652>  Thu, 02 Jul 2026 17:36:00 +0000
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Thu, 02 Jul 2026 17:36:00 +0000
 
 qcom-sensors (1.0.2-0qli+staging1) forky; urgency=medium
 
   [ Agathe Porte ]
   * Initial release
 
- -- root <root@cf28c5a5b365>  Thu, 02 Jul 2026 17:28:42 +0000
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Thu, 02 Jul 2026 17:28:42 +0000
