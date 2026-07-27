@@ -12,7 +12,6 @@ qcom-sensors (2.0.1+260712-0qli+staging1) UNRELEASED; urgency=medium
 
  -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Fri, 14 Jul 2026 10:24:01 +0000
 
-
 qcom-sensors (1.0.2-0qli+staging1) forky; urgency=medium
 
   [ Agathe Porte ]
