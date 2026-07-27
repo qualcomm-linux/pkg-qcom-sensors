@@ -1,14 +1,14 @@
 Source: qcom-sensors
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
 Standards-Version: 4.6.2
-Section: misc
+Section: non-free/misc
 Build-Depends:
  debhelper-compat (= 13),
 
 Package: qcom-sensors-api
 Architecture: arm64
 Multi-Arch: same
-Section: libs
+Section: non-free/libs
 Depends:
  libfastrpc1,
  qcom-sensing-hub,
@@ -20,7 +20,7 @@ Description: Qualcomm Sensors API library
 Package: qcom-sensors-core
 Architecture: arm64
 Multi-Arch: same
-Section: libs
+Section: non-free/libs
 Depends:
  libqcci1,
  libqencdec1,
@@ -35,7 +35,7 @@ Description: Qualcomm Sensors core library
 Package: qcom-sensors-registry
 Architecture: arm64
 Multi-Arch: same
-Section: utils
+Section: non-free/utils
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
@@ -45,7 +45,7 @@ Description: Qualcomm Sensors registry
 Package: qcom-sensors-services
 Architecture: arm64
 Multi-Arch: same
-Section: utils
+Section: non-free/utils
 Depends:
  libfastrpc1,
  qcom-sensors-registry,
@@ -57,7 +57,7 @@ Description: Qualcomm Sensors services daemon
 Package: qcom-sensors-test-core
 Architecture: arm64
 Multi-Arch: same
-Section: utils
+Section: non-free/utils
 Depends:
  qcom-libdiag,
  qcom-sensing-hub,
@@ -71,7 +71,7 @@ Description: Qualcomm Sensors test core
 Package: qcom-sensors-test-apps
 Architecture: arm64
 Multi-Arch: same
-Section: utils
+Section: non-free/utils
 Depends:
  qcom-sensing-hub,
  qcom-sensors-api,
@@ -85,7 +85,7 @@ Description: Qualcomm Sensors test applications
 Package: qcom-sensors-api-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  libfastrpc-dev,
  qcom-sensing-hub-dev,
@@ -98,7 +98,7 @@ Description: Qualcomm Sensors API library - development headers
 Package: qcom-sensors-core-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  libqmi-framework-dev,
  qcom-sensing-hub-dev,
@@ -112,7 +112,7 @@ Description: Qualcomm Sensors core library - development headers
 Package: qcom-sensors-registry-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  qcom-sensors-registry (= ${binary:Version}),
  ${misc:Depends},
@@ -123,7 +123,7 @@ Description: Qualcomm Sensors registry - development files
 Package: qcom-sensors-services-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  libfastrpc-dev,
  qcom-sensors-registry-dev,
@@ -136,7 +136,7 @@ Description: Qualcomm Sensors services - development files
 Package: qcom-sensors-test-core-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  qcom-sensing-hub-dev,
  qcom-sensors-api-dev (= ${binary:Version}),
@@ -150,7 +150,7 @@ Description: Qualcomm Sensors test core - development headers
 Package: qcom-sensors-test-apps-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
+Section: non-free/libdevel
 Depends:
  qcom-sensing-hub-dev,
  qcom-sensors-api-dev,
