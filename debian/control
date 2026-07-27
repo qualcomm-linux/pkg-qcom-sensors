@@ -1,5 +1,7 @@
 Source: qcom-sensors
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
+Uploaders:
+ Agathe Porte <agathe.porte@oss.qualcomm.com>,
 Standards-Version: 4.6.2
 Section: non-free/misc
 Build-Depends:
