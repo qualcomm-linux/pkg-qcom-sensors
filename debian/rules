@@ -5,15 +5,6 @@ export DH_VERBOSE=1
 %:
 	dh $@
 
-override_dh_auto_configure:
-	:
-
-override_dh_auto_build:
-	:
-
-override_dh_auto_clean:
-	:
-
 override_dh_auto_install:
 	# -------- API --------
 	mkdir -p debian/qcom-sensors-api/usr/lib/aarch64-linux-gnu
@@ -73,20 +64,5 @@ override_dh_auto_install:
 	mkdir -p debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu
 	cp -a qcom-sensors-test-apps-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu/
 
-override_dh_install:
-	:
-
 override_dh_installsystemd:
 	dh_installsystemd -p qcom-sensors-services --name=sscrpcd
-
-override_dh_strip:
-	:
-
-override_dh_dwz:
-	:
-
-override_dh_shlibdeps:
-	:
-
-override_dh_fixperms:
-	:
