@@ -6,14 +6,19 @@ Standards-Version: 4.6.2
 Section: non-free/misc
 Build-Depends:
  debhelper-compat (= 13),
+Build-Depends-Arch:
+ libfastrpc1,
+ libqcci1,
+ libqencdec1,
+ libqmi-common1,
+ qcom-libdiag,
+ qcom-sensing-hub,
 
 Package: qcom-sensors-api
 Architecture: arm64
 Multi-Arch: same
 Section: non-free/libs
 Depends:
- libfastrpc1,
- qcom-sensing-hub,
  ${misc:Depends},
  ${shlibs:Depends},
 Description: Qualcomm Sensors API library
@@ -24,10 +29,6 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/libs
 Depends:
- libqcci1,
- libqencdec1,
- libqmi-common1,
- qcom-sensing-hub,
  qcom-sensors-api (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
@@ -49,7 +50,6 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/utils
 Depends:
- libfastrpc1,
  qcom-sensors-registry,
  ${misc:Depends},
  ${shlibs:Depends},
@@ -61,8 +61,6 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/utils
 Depends:
- qcom-libdiag,
- qcom-sensing-hub,
  qcom-sensors-api,
  qcom-sensors-core,
  ${misc:Depends},
@@ -75,7 +73,6 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/utils
 Depends:
- qcom-sensing-hub,
  qcom-sensors-api,
  qcom-sensors-core,
  qcom-sensors-test-core,
