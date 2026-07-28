@@ -11,6 +11,7 @@ Build-Depends-Arch:
  libqcci1,
  libqencdec1,
  libqmi-common1,
+ libstdc++6,
  qcom-libdiag,
  qcom-sensing-hub,
 
