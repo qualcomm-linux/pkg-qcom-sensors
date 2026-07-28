@@ -8,6 +8,7 @@ Build-Depends:
  debhelper-compat (= 13),
 Build-Depends-Arch:
  libfastrpc1,
+ libglib2.0-0t64,
  libqcci1,
  libqencdec1,
  libqmi-common1,
