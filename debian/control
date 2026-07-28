@@ -15,6 +15,8 @@ Build-Depends-Arch:
  libstdc++6,
  qcom-libdiag,
  qcom-sensing-hub,
+Vcs-Browser: https://github.com/qualcomm-linux/pkg-qcom-sensors
+Vcs-Git: https://github.com/qualcomm-linux/pkg-qcom-sensors.git
 
 Package: qcom-sensors-api
 Architecture: arm64
