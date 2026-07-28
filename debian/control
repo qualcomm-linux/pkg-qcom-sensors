@@ -51,7 +51,6 @@ Description: Qualcomm Sensors registry
 
 Package: qcom-sensors-services
 Architecture: arm64
-Multi-Arch: same
 Section: non-free/utils
 Depends:
  qcom-sensors-registry,
@@ -74,7 +73,6 @@ Description: Qualcomm Sensors test core
 
 Package: qcom-sensors-test-apps
 Architecture: arm64
-Multi-Arch: same
 Section: non-free/utils
 Depends:
  qcom-sensors-api,
