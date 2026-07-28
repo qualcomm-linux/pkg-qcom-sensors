@@ -92,7 +92,6 @@ Depends:
  qcom-sensing-hub-dev,
  qcom-sensors-api (= ${binary:Version}),
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors API library - development headers
  Development headers for the Qualcomm Sensors API library.
 
@@ -106,7 +105,6 @@ Depends:
  qcom-sensors-api-dev (= ${binary:Version}),
  qcom-sensors-core (= ${binary:Version}),
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors core library - development headers
  Development headers for the Qualcomm Sensors core library.
 
@@ -117,7 +115,6 @@ Section: non-free/libdevel
 Depends:
  qcom-sensors-registry (= ${binary:Version}),
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors registry - development files
  Development files for the Qualcomm Sensors registry.
 
@@ -144,7 +141,6 @@ Depends:
  qcom-sensors-core-dev (= ${binary:Version}),
  qcom-sensors-test-core (= ${binary:Version}),
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors test core - development headers
  Development headers for the Qualcomm Sensors test core library.
 
@@ -159,6 +155,5 @@ Depends:
  qcom-sensors-test-apps (= ${binary:Version}),
  qcom-sensors-test-core-dev,
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors test applications - development files
  Development files for the Qualcomm Sensors test applications.
