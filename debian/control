@@ -120,7 +120,6 @@ Description: Qualcomm Sensors registry - development files
 
 Package: qcom-sensors-services-dev
 Architecture: arm64
-Multi-Arch: same
 Section: non-free/libdevel
 Depends:
  libfastrpc-dev,
@@ -146,7 +145,6 @@ Description: Qualcomm Sensors test core - development headers
 
 Package: qcom-sensors-test-apps-dev
 Architecture: arm64
-Multi-Arch: same
 Section: non-free/libdevel
 Depends:
  qcom-sensing-hub-dev,
