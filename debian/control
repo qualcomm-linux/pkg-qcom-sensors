@@ -40,12 +40,10 @@ Description: Qualcomm Sensors core library
  Core library for the Qualcomm Sensors framework.
 
 Package: qcom-sensors-registry
-Architecture: arm64
-Multi-Arch: same
+Architecture: all
 Section: non-free/utils
 Depends:
  ${misc:Depends},
- ${shlibs:Depends},
 Description: Qualcomm Sensors registry
  Registry service for the Qualcomm Sensors framework.
 
