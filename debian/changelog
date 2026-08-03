@@ -1,3 +1,9 @@
+qcom-sensors (2.0.1+260712-0qli+staging3~) UNRELEASED; urgency=medium
+
+  * Unreleased changes
+
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Mon, 03 Aug 2026 09:06:18 +0000
+
 qcom-sensors (2.0.1+260712-0qli+staging2) forky; urgency=medium
 
   [ Venkata Akhil Segu ]
