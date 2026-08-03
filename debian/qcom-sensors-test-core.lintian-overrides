@@ -1,2 +1,5 @@
 # Let’s ignore spelling mistakes for now
 spelling-error-in-binary
+
+# We do not have control of which flags are used during build
+hardening-no-bindnow

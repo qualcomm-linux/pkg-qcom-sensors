@@ -1,18 +1,9 @@
-#!/usr/bin/make -rRf
+#!/usr/bin/make -f
 
 export DH_VERBOSE=1
 
 %:
 	dh $@
-
-override_dh_auto_configure:
-	:
-
-override_dh_auto_build:
-	:
-
-override_dh_auto_clean:
-	:
 
 override_dh_auto_install:
 	# -------- API --------
@@ -41,19 +32,11 @@ override_dh_auto_install:
 	mkdir -p debian/qcom-sensors-registry/etc/sensors
 	cp -a qcom-sensors-registry/arm64/etc/. debian/qcom-sensors-registry/etc/
 
-	# -------- REGISTRY DEV --------
-	mkdir -p debian/qcom-sensors-registry-dev/usr/lib/aarch64-linux-gnu
-	cp -a qcom-sensors-registry-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-registry-dev/usr/lib/aarch64-linux-gnu/
-
 	# -------- SERVICES --------
 	mkdir -p debian/qcom-sensors-services/usr/bin
 	mkdir -p debian/qcom-sensors-services/usr/lib/systemd/system
 	cp -a qcom-sensors-services/arm64/usr/bin/. debian/qcom-sensors-services/usr/bin/
 	cp -a qcom-sensors-services/arm64/usr/lib/systemd/system/. debian/qcom-sensors-services/usr/lib/systemd/system/
-
-	# -------- SERVICES DEV --------
-	mkdir -p debian/qcom-sensors-services-dev/usr/lib/aarch64-linux-gnu
-	cp -a qcom-sensors-services-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-services-dev/usr/lib/aarch64-linux-gnu/
 
 	# -------- TEST CORE --------
 	mkdir -p debian/qcom-sensors-test-core/usr/lib/aarch64-linux-gnu
@@ -69,24 +52,5 @@ override_dh_auto_install:
 	mkdir -p debian/qcom-sensors-test-apps/usr/bin
 	cp -a qcom-sensors-test-apps/arm64/usr/bin/. debian/qcom-sensors-test-apps/usr/bin/
 
-	# -------- TEST APPS DEV --------
-	mkdir -p debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu
-	cp -a qcom-sensors-test-apps-dev/arm64/usr/lib/aarch64-linux-gnu/. debian/qcom-sensors-test-apps-dev/usr/lib/aarch64-linux-gnu/
-
-override_dh_install:
-	:
-
 override_dh_installsystemd:
 	dh_installsystemd -p qcom-sensors-services --name=sscrpcd
-
-override_dh_strip:
-	:
-
-override_dh_dwz:
-	:
-
-override_dh_shlibdeps:
-	:
-
-override_dh_fixperms:
-	:

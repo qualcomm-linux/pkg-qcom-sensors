@@ -1,114 +1,169 @@
 Source: qcom-sensors
 Maintainer: Venkata Akhil Segu <vsegu@qti.qualcomm.com>
+Uploaders:
+ Agathe Porte <agathe.porte@oss.qualcomm.com>,
 Standards-Version: 4.6.2
-Section: misc
-Priority: optional
-Build-Depends: debhelper-compat (= 13)
+Section: non-free/misc
+Build-Depends:
+ debhelper-compat (= 13),
+Build-Depends-Arch:
+ libfastrpc1,
+ libglib2.0-0t64,
+ libqcci1,
+ libqencdec1,
+ libqmi-common1,
+ libstdc++6,
+ qcom-libdiag,
+ qcom-sensing-hub,
+Homepage: https://docs.qualcomm.com/doc/80-70029-7/topic/landing_page.html
+Vcs-Browser: https://github.com/qualcomm-linux/pkg-qcom-sensors
+Vcs-Git: https://github.com/qualcomm-linux/pkg-qcom-sensors.git
 
 Package: qcom-sensors-api
 Architecture: arm64
 Multi-Arch: same
-Section: libs
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensing-hub, libfastrpc1
-Description: Qualcomm Sensors API library
- API library for the Qualcomm Sensors framework.
+Section: non-free/libs
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Qualcomm Sensors API (runtime libraries)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the API runtime libraries.
 
 Package: qcom-sensors-core
 Architecture: arm64
 Multi-Arch: same
-Section: libs
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-api (= ${binary:Version}), qcom-sensing-hub, libqcci1, libqencdec1, libqmi-common1
-Description: Qualcomm Sensors core library
- Core library for the Qualcomm Sensors framework.
+Section: non-free/libs
+Depends:
+ qcom-sensors-api (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Qualcomm Sensors core (runtime libraries)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the core runtime libraries.
 
 Package: qcom-sensors-registry
-Architecture: arm64
-Multi-Arch: same
-Section: utils
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Architecture: all
+Section: non-free/utils
+Depends:
+ ${misc:Depends},
 Description: Qualcomm Sensors registry
- Registry service for the Qualcomm Sensors framework.
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the registry files.
 
 Package: qcom-sensors-services
 Architecture: arm64
-Multi-Arch: same
-Section: utils
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, libfastrpc1, qcom-sensors-registry
-Description: Qualcomm Sensors services daemon
- Services daemon for the Qualcomm Sensors framework.
+Section: non-free/utils
+Depends:
+ qcom-sensors-registry,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Qualcomm Sensors service
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the daemon service.
 
 Package: qcom-sensors-test-core
 Architecture: arm64
 Multi-Arch: same
-Section: utils
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensing-hub, qcom-sensors-api, qcom-sensors-core, qcom-libdiag
-Description: Qualcomm Sensors test core
- Test core library for the Qualcomm Sensors framework.
+Section: non-free/utils
+Depends:
+ qcom-sensors-api,
+ qcom-sensors-core,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Qualcomm Sensors test core (runtime libraries)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the test core runtime libraries.
 
 Package: qcom-sensors-test-apps
 Architecture: arm64
-Multi-Arch: same
-Section: utils
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensing-hub, qcom-sensors-api, qcom-sensors-core, qcom-sensors-test-core
+Section: non-free/utils
+Depends:
+ qcom-sensors-api,
+ qcom-sensors-core,
+ qcom-sensors-test-core,
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: Qualcomm Sensors test applications
- Test applications for the Qualcomm Sensors framework.
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides the test applications.
 
 Package: qcom-sensors-api-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensing-hub-dev, libfastrpc-dev, qcom-sensors-api (= ${binary:Version})
-Description: Qualcomm Sensors API library - development headers
- Development headers for the Qualcomm Sensors API library.
+Section: non-free/libdevel
+Depends:
+ libfastrpc-dev,
+ qcom-sensing-hub-dev,
+ qcom-sensors-api (= ${binary:Version}),
+ ${misc:Depends},
+Description: Qualcomm Sensors API (development files)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides files necessary to develop programs using the API
+ libraries.
 
 Package: qcom-sensors-core-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-core (= ${binary:Version}), qcom-sensors-api-dev (= ${binary:Version}), qcom-sensing-hub-dev, libqmi-framework-dev
-Description: Qualcomm Sensors core library - development headers
- Development headers for the Qualcomm Sensors core library.
-
-Package: qcom-sensors-registry-dev
-Architecture: arm64
-Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-registry (= ${binary:Version})
-Description: Qualcomm Sensors registry - development files
- Development files for the Qualcomm Sensors registry.
-
-Package: qcom-sensors-services-dev
-Architecture: arm64
-Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, libfastrpc-dev, qcom-sensors-registry-dev, qcom-sensors-services (= ${binary:Version})
-Description: Qualcomm Sensors services - development files
- Development files for the Qualcomm Sensors services.
+Section: non-free/libdevel
+Depends:
+ libqmi-framework-dev,
+ qcom-sensing-hub-dev,
+ qcom-sensors-api-dev (= ${binary:Version}),
+ qcom-sensors-core (= ${binary:Version}),
+ ${misc:Depends},
+Description: Qualcomm Sensors core (development files)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides files necessary to develop programs using the core
+ libraries.
 
 Package: qcom-sensors-test-core-dev
 Architecture: arm64
 Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-test-core (= ${binary:Version}), qcom-sensors-core-dev (= ${binary:Version}), qcom-sensors-api-dev (= ${binary:Version}), qcom-sensing-hub-dev
-Description: Qualcomm Sensors test core - development headers
- Development headers for the Qualcomm Sensors test core library.
-
-Package: qcom-sensors-test-apps-dev
-Architecture: arm64
-Multi-Arch: same
-Section: libdevel
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensing-hub-dev, qcom-sensors-api-dev, qcom-sensors-core-dev, qcom-sensors-test-core-dev, qcom-sensors-test-apps (= ${binary:Version})
-Description: Qualcomm Sensors test applications - development files
- Development files for the Qualcomm Sensors test applications.
+Section: non-free/libdevel
+Depends:
+ qcom-sensing-hub-dev,
+ qcom-sensors-api-dev (= ${binary:Version}),
+ qcom-sensors-core-dev (= ${binary:Version}),
+ qcom-sensors-test-core (= ${binary:Version}),
+ ${misc:Depends},
+Description: Qualcomm Sensors test core (development files)
+ Qualcomm Sensors is a collection of prebuilt core binaries required for
+ sensor enablement and hardware sensor data access. These prebuilt binaries
+ also include test applications to validate sensor services functionality
+ through the Sensinghub Interface.
+ .
+ This package provides files necessary to develop programs using the test core
+ libraries.

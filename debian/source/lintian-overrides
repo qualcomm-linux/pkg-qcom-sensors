@@ -3,3 +3,6 @@ source-contains-prebuilt-binary [*]
 
 # This package is non-free, we are expecting missing sources for .so files
 source-is-missing [*]
+
+# Expected for external debugging symbols
+binary-with-bad-dynamic-table [*/arm64/usr/lib/debug/*]
