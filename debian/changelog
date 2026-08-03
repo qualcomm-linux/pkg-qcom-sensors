@@ -1,8 +1,9 @@
-qcom-sensors (2.0.1+260712-0qli+staging2~bpo13+1) UNRELEASED; urgency=medium
+qcom-sensors (2.0.1+260712-0qli+staging2~bpo13+1) trixie; urgency=medium
 
+  [ Agathe Porte ]
   * Rebuild for trixie.
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Mon, 03 Aug 2026 15:09:39 +0200
+ -- Debusine Action GitHub Bot <noreply@bot.invalid>  Mon, 03 Aug 2026 13:14:47 +0000
 
 qcom-sensors (2.0.1+260712-0qli+staging2) forky; urgency=medium
 
