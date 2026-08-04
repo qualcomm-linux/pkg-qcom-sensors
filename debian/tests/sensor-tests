@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# This test needs to be run on a Glymur CRD or similarly supported hardware.
+# It can be run locally on the hardware itself with:
+#
+#     autopkgtest . -- null
+
+set -eux
+
+ssc_sensor_info
+
+see_workhorse -show_sensors=1
+
+swh() {
+	see_workhorse \
+		-sample_rate=max \
+		-duration=5 \
+		-display_events=1 \
+		$@
+}
+
+for sensor in accel gyro
+do
+	for rigid_body in display keyboard
+	do
+		swh -sensor=$sensor -rigid_body=$rigid_body
+	done
+done
+
+swh -sensor=color
+
+swh -sensor=ambient_light -stream_type=0

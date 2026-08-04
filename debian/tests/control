@@ -1,0 +1,6 @@
+Tests: sensor-tests
+Architecture: arm64
+Restrictions: needs-root, isolation-machine, breaks-testbed
+Depends:
+ qcom-sensors-test-apps,
+ @recommends@
