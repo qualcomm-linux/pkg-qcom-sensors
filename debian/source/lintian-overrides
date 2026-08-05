@@ -6,3 +6,9 @@ source-is-missing [*]
 
 # Expected for external debugging symbols
 binary-with-bad-dynamic-table [*/arm64/usr/lib/debug/*]
+
+# Bad ELF headers in precompiled debug files
+# Ignore while they are not installed on the system, reported here:
+# https://github.com/qualcomm-linux/pkg-qcom-sensors/issues/35
+elf-error In program headers: Unable to find program interpreter name [qcom-sensors-services-dbgsym/*.debug]
+elf-error In program headers: Unable to find program interpreter name [qcom-sensors-test-apps-dbgsym/*.debug]
