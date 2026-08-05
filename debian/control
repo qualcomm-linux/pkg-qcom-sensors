@@ -14,7 +14,7 @@ Build-Depends-Arch:
  libqmi-common1,
  libstdc++6,
  qcom-libdiag,
- qcom-sensing-hub,
+ libsensinghub1,
 Homepage: https://docs.qualcomm.com/doc/80-70029-7/topic/landing_page.html
 Vcs-Browser: https://github.com/qualcomm-linux/pkg-qcom-sensors
 Vcs-Git: https://github.com/qualcomm-linux/pkg-qcom-sensors.git
