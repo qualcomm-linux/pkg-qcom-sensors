@@ -12,3 +12,7 @@ binary-with-bad-dynamic-table [*/arm64/usr/lib/debug/*]
 # https://github.com/qualcomm-linux/pkg-qcom-sensors/issues/35
 elf-error In program headers: Unable to find program interpreter name [qcom-sensors-services-dbgsym/*.debug]
 elf-error In program headers: Unable to find program interpreter name [qcom-sensors-test-apps-dbgsym/*.debug]
+
+# No upstream bug tracking or repository, this is closed-source software
+upstream-metadata-missing-bug-tracking [debian/upstream/metadata]
+upstream-metadata-missing-repository [debian/upstream/metadata]
