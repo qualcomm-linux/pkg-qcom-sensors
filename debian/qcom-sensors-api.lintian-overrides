@@ -5,3 +5,6 @@ hardening-no-bindnow
 # export a reduced set of symbols as explained here:
 # https://wiki.debian.org/UsingSymbolsFiles#Proper_visibility_for_C.2B-.2B-_symbols
 no-symbols-control-file
+
+# Package has multiple .so libraries that are shipped as a bundle
+package-name-doesnt-match-sonames libsensinghubapiprop2 libsensinghubapipropc2 libsns-direct-channel-stub2 libsns-remote-proc-state-stub2
