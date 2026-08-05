@@ -51,6 +51,3 @@ override_dh_auto_install:
 	# -------- TEST APPS --------
 	mkdir -p debian/qcom-sensors-test-apps/usr/bin
 	cp -a qcom-sensors-test-apps/arm64/usr/bin/. debian/qcom-sensors-test-apps/usr/bin/
-
-override_dh_installsystemd:
-	dh_installsystemd -p qcom-sensors-services --name=sscrpcd
