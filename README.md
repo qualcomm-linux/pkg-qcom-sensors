@@ -8,22 +8,22 @@ This repository produces the following Debian packages from prebuilt binaries:
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `qcom-sensors-api` | 1.0.2 | Qualcomm Sensors API library |
-| `qcom-sensors-core` | 1.0.2 | Qualcomm Sensors core library |
-| `qcom-sensors-registry` | 1.0.2 | Qualcomm Sensors registry service |
+| `qcom-sensors-api` | 2.0.2 | Qualcomm Sensors API library |
+| `qcom-sensors-core` | 2.0.2 | Qualcomm Sensors core library |
+| `qcom-sensors-registry` | 2.0.2 | Qualcomm Sensors registry service |
 | `qcom-sensors-services` | 1.0.4 | Qualcomm Sensors services daemon |
-| `qcom-sensors-test-core` | 1.0.2 | Qualcomm Sensors test core library |
-| `qcom-sensors-test-apps` | 1.0.2 | Qualcomm Sensors test applications |
+| `qcom-sensors-test-core` | 2.0.2 | Qualcomm Sensors test core library |
+| `qcom-sensors-test-apps` | 2.0.2 | Qualcomm Sensors test applications |
 
 ## Prebuilt Source
 
 Individual per-package tarballs are also available in the same directory:
-- `qcom-sensors-api_1.0.2_arm64.tar.gz`
-- `qcom-sensors-core_1.0.2_arm64.tar.gz`
-- `qcom-sensors-registry_1.0.2_arm64.tar.gz`
+- `qcom-sensors-api_2.0.2_arm64.tar.gz`
+- `qcom-sensors-core_2.0.2_arm64.tar.gz`
+- `qcom-sensors-registry_2.0.2_arm64.tar.gz`
 - `qcom-sensors-services_1.0.4_arm64.tar.gz`
-- `qcom-sensors-test-apps_1.0.2_arm64.tar.gz`
-- `qcom-sensors-test-core_1.0.2_arm64.tar.gz`
+- `qcom-sensors-test-apps_2.0.2_arm64.tar.gz`
+- `qcom-sensors-test-core_2.0.2_arm64.tar.gz`
 
 ## Repository Structure
 
