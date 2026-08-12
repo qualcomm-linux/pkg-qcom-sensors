@@ -1,4 +1,4 @@
-qcom-sensors-prebuilts (2.0.2-1) resolute; urgency=medium
+qcom-sensors-prebuilts (2.0.2-1) UNRELEASED; urgency=medium
 
   [ Venkata Akhil Segu ]
   * sensors: Fix keyboard IMU axis mapping.
