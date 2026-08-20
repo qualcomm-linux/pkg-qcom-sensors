@@ -1,9 +1,9 @@
-qcom-sensors-prebuilts (2.0.2-2) UNRELEASED; urgency=medium
+qcom-sensors-prebuilts (2.0.2-2) resolute; urgency=medium
 
   [ Venkata Akhil Segu ]
   * sensors: Fix to pick the right qmi dependencies.
 
- -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 20 Aug 2026 22:02:32 +0000
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Thu, 20 Aug 2026 15:06:59 +0000
 
 qcom-sensors-prebuilts (2.0.2-1) resolute; urgency=medium
 
