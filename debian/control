@@ -20,7 +20,7 @@ Architecture: arm64
 Multi-Arch: same
 Section: libs
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-api (= ${binary:Version}), qcom-sensing-hub, qcom-qmi-framework-utils, qcom-sensors-services
+Depends: ${misc:Depends}, ${shlibs:Depends}, qcom-sensors-api (= ${binary:Version}), qcom-sensing-hub, qmi-framework-utils, qcom-sensors-services
 Description: Qualcomm Sensors core library
  Core library for the Qualcomm Sensors framework.
 
