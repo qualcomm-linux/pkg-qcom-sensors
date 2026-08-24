@@ -1,5 +1,6 @@
-qcom-sensors (2.0.1+260712-0qli1~) UNRELEASED; urgency=medium
+qcom-sensors (2.0.1+260712-0qli1) forky; urgency=medium
 
+  [ Agathe Porte ]
   * Initial release to QLI
   * Create initial set of autopkgtests
   * B-D on libsensinghub1 instead of qcom-sensing-hub
@@ -9,7 +10,7 @@ qcom-sensors (2.0.1+260712-0qli1~) UNRELEASED; urgency=medium
   * drop debian/sscrpcd.service
   * d/control: s/qcom-libdiag/libdiag1/
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Mon, 24 Aug 2026 16:30:24 +0200
+ -- Debusine Action Bot <noreply@bot.invalid>  Mon, 24 Aug 2026 14:39:45 +0000
 
 qcom-sensors (2.0.1+260712-0qli+staging2) forky; urgency=medium
 
