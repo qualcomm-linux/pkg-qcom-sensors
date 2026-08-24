@@ -7,14 +7,14 @@ Section: non-free/misc
 Build-Depends:
  debhelper-compat (= 13),
 Build-Depends-Arch:
+ libdiag1,
  libfastrpc1,
  libglib2.0-0t64,
  libqcci1,
  libqencdec1,
  libqmi-common1,
- libstdc++6,
- qcom-libdiag,
  libsensinghub1,
+ libstdc++6,
 Homepage: https://docs.qualcomm.com/doc/80-70029-7/topic/landing_page.html
 Vcs-Browser: https://github.com/qualcomm-linux/pkg-qcom-sensors
 Vcs-Git: https://github.com/qualcomm-linux/pkg-qcom-sensors.git
