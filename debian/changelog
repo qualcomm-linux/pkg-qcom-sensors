@@ -1,8 +1,9 @@
-qcom-sensors-prebuilts (2.0.2-3) UNRELEASED; urgency=medium
+qcom-sensors-prebuilts (2.0.2-3) resolute; urgency=medium
 
+  [ Venkata Akhil Segu ]
   * sensors: enable diag-shim compilation
 
- -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Thu, 02 Sep 2026 18:25:17 +0000
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Wed, 02 Sep 2026 13:02:41 +0000
 
 qcom-sensors-prebuilts (2.0.2-2) resolute; urgency=medium
 
