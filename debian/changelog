@@ -3,7 +3,7 @@ qcom-sensors-prebuilts (2.0.3-1) UNRELEASED; urgency=medium
   [ Venkata Akhil Segu ]
   * sensors: inling version to inline with downstream code.
 
--- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 03 Sep 2026 15:45:13 +0000
+ -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Wed, 03 Sep 2026 15:45:13 +0000
 
 qcom-sensors-prebuilts (2.0.2-3) resolute; urgency=medium
 
