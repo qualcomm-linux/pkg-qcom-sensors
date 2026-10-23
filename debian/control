@@ -140,7 +140,7 @@ Description: Qualcomm Sensors API (development files)
 Package: qcom-sensors-core-dev
 Architecture: arm64
 Multi-Arch: same
-Section: non-free/libdevel
+Section: non-free/oldlibs
 Depends:
  libsensinghub-dev (>= 2.3.2-0qli1),
  ${misc:Depends},
