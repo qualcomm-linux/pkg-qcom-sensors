@@ -10,4 +10,4 @@ hardening-no-bindnow
 no-symbols-control-file
 
 # Package has multiple .so libraries that are shipped as a bundle
-package-name-doesnt-match-sonames libSEESalt2 libUSTANative2 libsnsdiaglog-c2 libsnsdiaglog2
+package-name-doesnt-match-sonames libSEESalt2 libUSTANative2 libsnsdiaglog-c2 libsnsdiaglog2 libsnsdiagshim-c2
