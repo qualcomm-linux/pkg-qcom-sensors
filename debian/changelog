@@ -1,8 +1,9 @@
-qcom-sensors (2.0.1+260712-0qli2~) UNRELEASED; urgency=medium
+qcom-sensors (2.1.1-0qli1~) UNRELEASED; urgency=medium
 
-  * Unreleased changes
+  * New upstream release
+  * d/watch: update for now versioned upstream tarballs
 
- -- Debusine Action Bot <noreply@bot.invalid>  Mon, 24 Aug 2026 14:43:13 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 12:54:57 +0000
 
 qcom-sensors (2.0.1+260712-0qli1) forky; urgency=medium
 
