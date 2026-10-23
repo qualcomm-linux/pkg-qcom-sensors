@@ -144,7 +144,7 @@ Section: non-free/libdevel
 Depends:
  libsensinghub-dev (>= 2.3.2-0qli1),
  ${misc:Depends},
-Description: Qualcomm Sensors core (transitional package)
+Description: Qualcomm Sensors core dev (transitional package)
  Qualcomm Sensors is a collection of prebuilt core binaries required for
  sensor enablement and hardware sensor data access. These prebuilt binaries
  also include test applications to validate sensor services functionality
