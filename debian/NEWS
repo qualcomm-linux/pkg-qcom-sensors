@@ -1,0 +1,13 @@
+qcom-sensors (2.1.1-0qli1) forky; urgency=medium
+
+  Many binary packages in this upstream release have been moved from
+  qcom-sensors (non-free) to sensinghub (contrib). Transitional packages are
+  provided for an easy migration.
+  .
+  However, users should note that the daemon sscrpcd.service is now
+  named sensors.qti.service in the sensinghub-sensors-daemon package.
+  .
+  Any systemd override or disable needs to be reconsidered given the change of
+  daemon name.
+
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 13:17:58 +0000
