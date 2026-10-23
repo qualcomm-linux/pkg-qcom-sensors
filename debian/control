@@ -125,7 +125,7 @@ Multi-Arch: same
 Section: non-free/libdevel
 Depends:
  libfastrpc-dev,
- qcom-sensing-hub-dev,
+ libsensinghub-dev,
  qcom-sensors-api (= ${binary:Version}),
  ${misc:Depends},
 Description: Qualcomm Sensors API (development files)
@@ -160,7 +160,7 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/libdevel
 Depends:
- qcom-sensing-hub-dev,
+ libsensinghub-dev,
  qcom-sensors-api-dev (= ${binary:Version}),
  qcom-sensors-test-core (= ${binary:Version}),
  ${misc:Depends},
