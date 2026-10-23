@@ -1,5 +1,6 @@
-qcom-sensors (2.1.1-0qli1~) UNRELEASED; urgency=medium
+qcom-sensors (2.1.1-0qli1) forky; urgency=medium
 
+  [ Agathe Porte ]
   * New upstream release
   * d/watch: update for now versioned upstream tarballs
   * .gitignore: drop gone upstream packages
@@ -13,7 +14,7 @@ qcom-sensors (2.1.1-0qli1~) UNRELEASED; urgency=medium
   * d/control: tweak duplicated short description
   * d/control: s/qcom-sensing-hub-dev/libsensinghub-dev/
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 14:25:04 +0000
+ -- Debusine Action Bot <noreply@bot.invalid>  Fri, 23 Oct 2026 14:38:42 +0000
 
 qcom-sensors (2.0.1+260712-0qli1) forky; urgency=medium
 
