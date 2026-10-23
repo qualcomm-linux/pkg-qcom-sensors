@@ -39,7 +39,7 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/oldlibs
 Depends:
- libsensinghub1 (>= 2.3.2-0qli1),
+ libsensinghub1 (>= 2.3.2-0qli1~bpo13+1),
  ${misc:Depends},
 Description: Qualcomm Sensors core (transitional package)
  Qualcomm Sensors is a collection of prebuilt core binaries required for
@@ -56,7 +56,7 @@ Package: qcom-sensors-registry
 Architecture: all
 Section: non-free/oldlibs
 Depends:
- sensinghub-sensors-daemon (>= 2.3.2-0qli1),
+ sensinghub-sensors-daemon (>= 2.3.2-0qli1~bpo13+1),
  ${misc:Depends},
 Description: Qualcomm Sensors registry
  Qualcomm Sensors is a collection of prebuilt core binaries required for
@@ -72,7 +72,7 @@ Package: qcom-sensors-services
 Architecture: arm64
 Section: non-free/oldlibs
 Depends:
- sensinghub-sensors-daemon (>= 2.3.2-0qli1),
+ sensinghub-sensors-daemon (>= 2.3.2-0qli1~bpo13+1),
  ${misc:Depends},
  ${shlibs:Depends},
 Description: Qualcomm Sensors service
@@ -142,7 +142,7 @@ Architecture: arm64
 Multi-Arch: same
 Section: non-free/oldlibs
 Depends:
- libsensinghub-dev (>= 2.3.2-0qli1),
+ libsensinghub-dev (>= 2.3.2-0qli1~bpo13+1),
  ${misc:Depends},
 Description: Qualcomm Sensors core dev (transitional package)
  Qualcomm Sensors is a collection of prebuilt core binaries required for
