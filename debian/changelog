@@ -10,8 +10,9 @@ qcom-sensors (2.1.1-0qli1~) UNRELEASED; urgency=medium
   * qcom-sensors-services: transitional, now provided by sensinghub-sensors-daemon
   * lintian: drop unused source overrides
   * lintian: ignore new libsnsdiagshim-c2 soname mismatch
+  * d/control: tweak duplicated short description
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 13:44:10 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 13:46:12 +0000
 
 qcom-sensors (2.0.1+260712-0qli1) forky; urgency=medium
 
