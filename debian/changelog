@@ -2,8 +2,16 @@ qcom-sensors (2.1.1-0qli1~) UNRELEASED; urgency=medium
 
   * New upstream release
   * d/watch: update for now versioned upstream tarballs
+  * .gitignore: drop gone upstream packages
+  * d/rules: introduce maintainerclean target
+  * qcom-sensors-core: transitional, now provided by libsensinghub1
+  * qcom-sensors-core-dev: transitional, now provided by libsensinghub-dev
+  * qcom-sensors-registry: transitional, now provided by sensinghub-sensors-daemon
+  * qcom-sensors-services: transitional, now provided by sensinghub-sensors-daemon
+  * lintian: drop unused source overrides
+  * lintian: ignore new libsnsdiagshim-c2 soname mismatch
 
- -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 12:54:57 +0000
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Fri, 23 Oct 2026 13:44:10 +0000
 
 qcom-sensors (2.0.1+260712-0qli1) forky; urgency=medium
 
