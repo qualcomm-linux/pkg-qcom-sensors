@@ -1,8 +1,38 @@
 qcom-sensors-prebuilts (2.0.3-2~) UNRELEASED; urgency=medium
 
-  * WIP — update changelog before next release
+  [ Keerthi Gowda ]
+  * debian/control: bump Standards-Version to 4.7.4, set Section to
+      non-free/misc, drop Priority/Rules-Requires-Root, switch to
+      Build-Depends-Arch for the arm64-specific dev dependencies, and
+      add Homepage/Vcs-Browser/Vcs-Git
+  * debian/rules: fix shebang and drop the no-op overrides for
+      dh_auto_configure/dh_auto_build/dh_auto_clean/dh_install/
+      dh_strip/dh_dwz/dh_shlibdeps/dh_fixperms, letting dh_shlibdeps run
+      with default debhelper behaviour so the declared ${shlibs:Depends}
+      reflect each package's actual runtime library dependencies
+  * debian/control: add libglib2.0-dev to Build-Depends-Arch so
+      dh_shlibdeps can resolve libglib-2.0.so.0 for qcom-sensors-test-apps,
+      previously masked by the dh_shlibdeps no-op override
+  * debian/watch: replace upstream.conf with a debian/watch file, matching
+      pkg-btftm/pkg-ftm_ip convention; since the real prebuilt tarball
+      (sensors-prebuilts.tar.gz) carries no version in its name, pin the
+      Artifactory TAG in the URL and force the extracted version to the
+      current upstream version via uversionmangle, to be bumped alongside
+      the TAG on future releases
+  * debian/rules: drop the data/ prefix from override_dh_auto_install's
+      cp -a sources and remove the now-unused maintainerclean target;
+      dpkg-source strips the orig tarball's sole top-level data/ directory
+      on extraction (standard "3.0 (quilt)" behaviour for a single-directory
+      tarball), so the installed packages must be copied from
+      <package>/arm64/... directly, matching pkg-btftm/pkg-ftm_ip
+  * debian/source/options: add extend-diff-ignore for .github and
+      .gitignore
+  * debian/gbp.conf: add gbp-buildpackage configuration
+  * debian/source/lintian-overrides: add overrides for prebuilt-binary
+      source package
+  * .gitignore: add root .gitignore for build artifacts
 
- -- Venkata Akhil Segu <vsegu@qti.qualcomm.com>  Thu, 03 Sep 2026 16:44:34 +0000
+ -- Keerthi Gowda <kbalehal@qti.qualcomm.com>  Thu, 12 Nov 2026 21:30:00 +0000
 
 qcom-sensors-prebuilts (2.0.3-1) resolute; urgency=medium
 

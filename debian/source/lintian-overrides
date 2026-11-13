@@ -1,0 +1,3 @@
+# proprietary software
+source-contains-prebuilt-binary [*]
+source-is-missing [*]

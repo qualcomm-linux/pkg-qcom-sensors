@@ -1,0 +1,4 @@
+version=4
+opts="searchmode=plain,pgpmode=none,uversionmangle=s/.*/2.0.3/" \
+  https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/sensors.qli.0.0/260901.1/prebuilt_resolute/ \
+  (sensors-prebuilts\.tar\.gz) debian uupdate
